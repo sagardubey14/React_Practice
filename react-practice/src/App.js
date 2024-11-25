@@ -1,3 +1,4 @@
+import DragNDrop from "./Components/DragNDrop";
 import Tree from "./Components/Tree";
 import Table from "./Table";
 
@@ -7,8 +8,8 @@ function App() {
     <>
     Hello React
     {/* <Tree /> */}
-    <Table />
-    
+    {/* <Table /> */}
+    <DragNDrop />
     </>
   );
 }
