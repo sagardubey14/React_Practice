@@ -1,17 +1,23 @@
-import DragNDrop from "./Components/DragNDrop";
-import Tree from "./Components/Tree";
-import Table from "./Table";
-
-
+import { useEffect, useState } from "react"
+import './App.css'
+import { useUser } from "./Context/UserContext";
+import MouseMovement from "./Components/MouseMovement";
+import Reducer from "./Components/Reducer";
+import LazyComp from "./Components/LazyComp";
 function App() {
+  const {user, setUser} = useUser();
+  const [count, setCount] = useState(0);
+  useEffect(()=>{
+    console.log(count);
+  },[count])
+  
   return (
-    <>
-    Hello React
-    {/* <Tree /> */}
-    {/* <Table /> */}
-    <DragNDrop />
-    </>
-  );
+    <div className="main">
+      {/* <MouseMovement /> */}
+      {/* <Reducer /> */}
+      <LazyComp />
+    </div>
+  )
 }
 
-export default App;
+export default App
